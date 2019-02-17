@@ -1,27 +1,10 @@
 const express = require('express');
 const router = express.Router();
 //var MongoClient = require('mongodb').MongoClient;
-const ObjectID = require('mongodb').ObjectID;
-async = require("async");
-var mongoose = require('mongoose');
 var json = {};
-var model = require('../models/models');
+var model = require('../models_schema/models_schema');
 var CATEGORY_COLLECTION = model.categories;
-var mongoose = require('mongoose');
 
-// Using `mongoose.connect`...
-var promise = mongoose.connect('mongodb://sushant:sushant@ds119688.mlab.com:19688/nodeauth', {
-  useMongoClient: true,
-  /* other options */
-});
-// Or `createConnection`
-var promise = mongoose.createConnection('mongodb://sushant:sushant@ds119688.mlab.com:19688/nodeauth', {
-  useMongoClient: true,
-  /* other options */
-});
-
-var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://sushant:sushant@ds119688.mlab.com:19688/nodeauth";
 
 router.get('/getAllCategory', function(req, res, next) {
     var query = {};
