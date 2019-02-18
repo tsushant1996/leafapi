@@ -16,7 +16,8 @@ router.post('/createproduct',async (req, res, next) => {
           json = {'status':1,'result':result};
           res.send(json);
         } catch (error) {
-          
+            json = {'status':0,'error':error};
+            res.send(json)
         }
     } else {
       json = {'status':0,'error':'All fields are mandatory'};
@@ -39,6 +40,7 @@ router.post('/updateproduct', async (req, res, next) => {
           res.send(json);
       } catch (err) {
           json = {'status':0,'error':err};
+          res.send(json)
       }
 
   } else {

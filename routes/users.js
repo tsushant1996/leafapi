@@ -18,6 +18,7 @@ router.post('/createuser', async (req, res, next) => {
             res.send(json);
         } catch (err) {
             json = {'status':0,'error':err};
+            res.send(json);
         }
  
     } else {
@@ -39,6 +40,7 @@ router.post('/updateuser', async (req, res, next) => {
             res.send(json);
         } catch (err) {
             json = {'status':0,'error':err};
+            res.send(json);
         }
  
     } else {
